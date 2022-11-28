@@ -5,7 +5,6 @@ import controller.ModificacaoCadastroController;
 public class Principal {
 
 	public static void main(String[] args) throws Exception{
-		
 		String caminho = "C:\\TEMP";
 		String arquivo = "cadastro.csv";
 		ModificacaoCadastroController mod = new ModificacaoCadastroController();
@@ -14,5 +13,4 @@ public class Principal {
 		mod.novoCadastro(caminho, arquivo, 21, 30, 3000.0);
 		
 	}
-
 }

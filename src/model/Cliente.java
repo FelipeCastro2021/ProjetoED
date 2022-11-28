@@ -9,8 +9,6 @@ public class Cliente {
 
 	@Override
 	public String toString() {
-		String ret = cpf + ";" + nome + ";" + idade + ";" + limiteCredito;
-		return ret;
+		return cpf + ";" + nome + ";" + idade + ";" + limiteCredito;
 	}
-	
 }

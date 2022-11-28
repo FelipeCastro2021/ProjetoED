@@ -1,32 +1,29 @@
-package View;
+package panel;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextField;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
 import java.awt.Color;
-import javax.swing.SwingConstants;
 import java.awt.FlowLayout;
-import javax.swing.JProgressBar;
+import java.awt.Font;
+
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JProgressBar;
+import javax.swing.SwingConstants;
+import javax.swing.WindowConstants;
+import javax.swing.border.EmptyBorder;
+
+import panel.enumeracoes.Fonte;
 
 public class TelaAlunoGrupo extends JFrame {
 
 	private JPanel contentPane;
 
-	/**
-	 * Create the frame.
-	 */
 	public TelaAlunoGrupo() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setBounds(100, 100, 768, 727);
+		setResizable(false);
+		
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -45,7 +42,7 @@ public class TelaAlunoGrupo extends JFrame {
 		lblIntroducao.setVerticalAlignment(SwingConstants.TOP);
 		panel.add(lblIntroducao);
 		lblIntroducao.setBackground(new Color(187, 187, 187));
-		lblIntroducao.setFont(new Font("Arial", Font.BOLD, 24));
+		lblIntroducao.setFont(new Font(Fonte.ARIAL.getFonte(), Font.BOLD, 24));
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(255, 255, 255));
@@ -56,13 +53,13 @@ public class TelaAlunoGrupo extends JFrame {
 		JLabel lblAcompanharDesenv = new JLabel("Acompanhe aqui o seu desenvolvimento:");
 		lblAcompanharDesenv.setBounds(5, 5, 228, 13);
 		panel_1.add(lblAcompanharDesenv);
-		lblAcompanharDesenv.setFont(new Font("Arial", Font.BOLD, 11));
+		lblAcompanharDesenv.setFont(new Font(Fonte.ARIAL.getFonte(), Font.BOLD, 11));
 		
 		JProgressBar progressDesenv = new JProgressBar();
 		progressDesenv.setValue(20);
 		progressDesenv.setBounds(5, 36, 662, 24);
 		progressDesenv.setBackground(new Color(255, 255, 255));
-		progressDesenv.setFont(new Font("Arial", Font.BOLD, 12));
+		progressDesenv.setFont(new Font(Fonte.ARIAL.getFonte(), Font.BOLD, 12));
 		progressDesenv.setForeground(new Color(255, 0, 0));
 		panel_1.add(progressDesenv);
 		
@@ -77,7 +74,7 @@ public class TelaAlunoGrupo extends JFrame {
 		panel_1.add(lblNewLabel_3);
 		
 		JLabel lblNewLabel = new JLabel("Atividades Pendentes");
-		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 14));
+		lblNewLabel.setFont(new Font(Fonte.ARIAL.getFonte(), Font.BOLD, 14));
 		lblNewLabel.setBounds(43, 169, 677, 14);
 		contentPane.add(lblNewLabel);
 		
@@ -94,12 +91,12 @@ public class TelaAlunoGrupo extends JFrame {
 		panelReport.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("Report Inicial - Debate da ideia do TCC");
-		lblNewLabel_1.setFont(new Font("Arial", Font.BOLD, 11));
+		lblNewLabel_1.setFont(new Font(Fonte.ARIAL.getFonte(), Font.BOLD, 11));
 		lblNewLabel_1.setBounds(10, 10, 226, 14);
 		panelReport.add(lblNewLabel_1);
 		
 		JLabel lblAtividadesRealizadas = new JLabel("Atividades Realizadas");
-		lblAtividadesRealizadas.setFont(new Font("Arial", Font.BOLD, 14));
+		lblAtividadesRealizadas.setFont(new Font(Fonte.ARIAL.getFonte(), Font.BOLD, 14));
 		lblAtividadesRealizadas.setBounds(43, 360, 677, 14);
 		contentPane.add(lblAtividadesRealizadas);
 		
@@ -116,7 +113,7 @@ public class TelaAlunoGrupo extends JFrame {
 		panelReport_1.setLayout(null);
 		
 		JLabel lblNewLabel_1_1 = new JLabel("Report Inicial - Debate da ideia do TCC");
-		lblNewLabel_1_1.setFont(new Font("Arial", Font.BOLD, 11));
+		lblNewLabel_1_1.setFont(new Font(Fonte.ARIAL.getFonte(), Font.BOLD, 11));
 		lblNewLabel_1_1.setBounds(10, 11, 255, 14);
 		panelReport_1.add(lblNewLabel_1_1);
 	}
